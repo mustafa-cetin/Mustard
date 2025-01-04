@@ -1,6 +1,7 @@
 #!/bin/bash
 
-libs=-luser32
-warnings="-Wno-writable-strings -Wno-format-security"
+libs="-luser32 -lopengl32 -lgdi32"
+warnings="-Wno-writable-strings -Wno-format-security -Wno-deprecated-declarations"
+includes="-Ithird_party -Ithird_party/Include"
 
-clang -g src/main.cpp -ohexapawa.exe  $libs $warnings
+clang++ $includes -g src/main.cpp -ohexapawa.exe  $libs $warnings

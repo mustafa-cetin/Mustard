@@ -20,6 +20,11 @@
 #define DEBUG_BREAK() __builtin_trap()
 #endif
 
+#define BIT(X) (1 << X)
+#define KB(x) (x * (unsigned long long)1024)
+#define MB(x) (KB(x) * (unsigned long long)1024)
+#define GB(x) (MB(x) * (unsigned long long)1024)  
+
 // logging
 enum TextColor
 {
